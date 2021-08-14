@@ -1,0 +1,1 @@
+{"importBase":"import","nativeBase":"native","name":"main","deps":[],"uuids":["96looN/o9IPK792iHisprB","fdjsU2o1RKF5x0TziDw3jI"],"paths":{"1":["db:/internal/default_renderpipeline/builtin-forward",0]},"scenes":{"db://assets/scene.scene":0},"packs":{},"versions":{"import":[],"native":[]},"redirect":[],"debug":false,"types":["cc.RenderPipeline"]}
