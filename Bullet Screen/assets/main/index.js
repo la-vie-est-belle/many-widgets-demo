@@ -1,0 +1,22 @@
+System.register("chunks:///_virtual/MW_Bullet_Screen.ts",["./_rollupPluginModLoBabelHelpers.js","cc"],(function(e){"use strict";var t,n,r,l,a,i,o,s,u,c,h,_,d,p,f,b,m,v,w;return{setters:[function(e){t=e.applyDecoratedDescriptor,n=e.inheritsLoose,r=e.initializerDefineProperty,l=e.assertThisInitialized,a=e.defineProperty},function(e){i=e.cclegacy,o=e._decorator,s=e.Prefab,u=e.CCFloat,c=e.CCInteger,h=e.UITransformComponent,_=e.Color,d=e.NodePool,p=e.Node,f=e.instantiate,b=e.Label,m=e.tween,v=e.Vec3,w=e.Component}],execute:function(){var y,M,g,C,S,A,B,I,P,T,x;i._RF.push({},"916448opO5C/Jq+wddF7FHQ","MW_Bullet_Screen",void 0);var D=o.ccclass,N=o.property;e("MWBulletScreen",(y=D("MWBulletScreen"),M=N({type:s}),g=N({type:u}),C=N({type:c}),S=N(),y((I=t((B=function(e){function t(){for(var t,n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];return t=e.call.apply(e,[this].concat(i))||this,r(l(t),"bulletScreenPrefab",I,l(t)),r(l(t),"spawnInterval",P,l(t)),r(l(t),"bulletsNum",T,l(t)),r(l(t),"isAllowRepeated",x,l(t)),a(l(t),"_texts",["Many Widgets","la vie est belle","Hello, world!","Cocos Creator","Bullet Scrren","Life is beautiful","Cocos Creator 3D"]),a(l(t),"_canvasUITrans",new h),a(l(t),"_lastIndex",Number.MAX_SAFE_INTEGER),a(l(t),"_bulletsPool",new d),a(l(t),"_isBulletScreenOn",!0),a(l(t),"_fixedDeltaTime",0),a(l(t),"_bulletsArray",[]),t}n(t,e);var i=t.prototype;return i.start=function(){this._canvasUITrans=this.node.getComponent(h),this._spawnBullets()},i._spawnBullets=function(){for(var e=this,t=Math.round(Math.random()*this.bulletsNum),n=function(t){var n=new p;n=e._bulletsPool.size()>0?e._bulletsPool.get():f(e.bulletScreenPrefab),e.node.addChild(n),e._bulletsArray.push(n);var r=e._randomStartPosY(),l=e._randomMoveTime();n.setPosition(e._canvasUITrans.width/2+10,r,0);var a=new b;(a=n.getComponent(b)).string=e._randomContent(),a.color=e._randomColor(),m(n).to(l,{position:new v(-e._canvasUITrans.width/2-500,r,0)}).call((function(){e._recycleBullet(n)})).start()},r=0;r<t;r++)n()},i._recycleBullet=function(e){this._bulletsPool.put(e);for(var t=0;t<this._bulletsArray.length;t++)if(this._bulletsArray[t].uuid==e.uuid){this._bulletsArray.splice(t,1);break}},i._randomColor=function(){var e=Math.round(255*Math.random()),t=Math.round(255*Math.random()),n=Math.round(255*Math.random());return new _(e,t,n)},i._randomContent=function(){var e=(9301*(new Date).getTime()+49297)%233280/233280,t=Math.floor(e*this._texts.length);if(t!=this._texts.length)return this.isAllowRepeated||this._lastIndex!=t?(this._lastIndex=t,this._texts[t]):""},i._randomMoveTime=function(){return Math.round(12*Math.random())+12},i._randomStartPosY=function(){var e=this._canvasUITrans.height;return.8*(Math.round(Math.random()*e)-e/2)},i.openBulletScreen=function(){this._isBulletScreenOn=!0;for(var e=0;e<this._bulletsArray.length;e++)this._bulletsArray[e].active=!0},i.closeBulletScreen=function(){this._isBulletScreenOn=!1;for(var e=0;e<this._bulletsArray.length;e++)this._bulletsArray[e].active=!1;this._bulletsArray=[]},i.setSpawnInterval=function(e){this.spawnInterval=e},i.setBulletsNum=function(e){this.bulletsNum=parseInt(e.toFixed(0))},i.setAllowRepeated=function(e){this.isAllowRepeated=e},i.update=function(e){this._fixedDeltaTime+=e,this._fixedDeltaTime>this.spawnInterval&&1==this._isBulletScreenOn&&(this._spawnBullets(),this._fixedDeltaTime=0)},t}(w)).prototype,"bulletScreenPrefab",[M],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),P=t(B.prototype,"spawnInterval",[g],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return 8}}),T=t(B.prototype,"bulletsNum",[C],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return 5}}),x=t(B.prototype,"isAllowRepeated",[S],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return!1}}),A=B))||A));i._RF.pop()}}}));
+
+System.register("chunks:///_virtual/main",["./MW_Bullet_Screen.ts"],(function(){"use strict";return{setters:[null],execute:function(){}}}));
+
+(function(r) {
+  r('virtual:///prerequisite-imports/main', 'chunks:///_virtual/main'); 
+})(function(mid, cid) {
+    System.register(mid, [cid], function (_export, _context) {
+    return {
+        setters: [function(_m) {
+            var _exportObj = {};
+
+            for (var _key in _m) {
+              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
+            }
+      
+            _export(_exportObj);
+        }],
+        execute: function () { }
+    };
+    });
+});
